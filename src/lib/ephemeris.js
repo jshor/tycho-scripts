@@ -335,12 +335,6 @@ const getEphemeris = (bodyCode, observerCode, revolutionOrder) => {
     });
 }
 
-const mockGetEphemeris = (...args) => {
-  return new Promise((resolve) => {
-    console.log('args: ', ...args);
-  });
-}
-
 module.exports = {
   DATE_FORMAT,
   getNumberVar,
@@ -356,9 +350,5 @@ module.exports = {
   renderDates,
   shouldLookupAgain,
   getEphemeris,
-  // getEphemeris: mockGetEphemeris,
   makeRequest
 };
-// requestInitial(5, 0, 'y').then((dat) => {
-//  console.log('Result: ', dat)
-// });

@@ -2,7 +2,7 @@ const glob = require('glob');
 const path = require('path');
 const fs = require('fs');
 
-const DATA_PATH = path.join(__dirname, '../../public/static/data/orbitals');
+const DATA_PATH = path.join(process.cwd(), './public/static/data/orbitals');
 
 /**
  * Returns JSON data from the given file path.

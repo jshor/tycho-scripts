@@ -1,13 +1,16 @@
 {
   "name": "tycho-scripts",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Node.js scripts for the Tycho.io project.",
-  "main": "src/index.js",
+  "bin": {
+    "tycho-scripts": "./src/index.js"
+  },
   "scripts": {
     "test": "mocha --reporter dot --require ./src/__tests__/index.js ./src/__tests__/*.test.js",
     "test:coverage": "nyc --reporter=lcov --reporter=text-lcov npm test"
   },
   "dependencies": {
+    "commander": "^2.11.0",
     "expect-telnet": "0.5.5",
     "moment": "^2.19.2"
   },

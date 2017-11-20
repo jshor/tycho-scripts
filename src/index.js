@@ -1,9 +1,18 @@
+#!/usr/bin/env node
+
+const program = require('commander');
+const package = require('../package.json');
 const orbitalCompiler = require('./lib/orbitalCompiler');
 const ephemeris = require('./lib/ephemeris');
 const orbitalUpdater = require('./lib/orbitalUpdater');
 
-const runScript = (cmd) => {
-  switch (cmd) {
+program
+  .version(package.version)
+  .option('-m --method [name]', 'Method to run')
+  .parse(process.argv);
+
+const runScript = ({method}) => {
+  switch (method) {
     case 'orbitals':
       return orbitalCompiler.compileBundles();
     case 'ephemeris':
@@ -13,4 +22,4 @@ const runScript = (cmd) => {
   }
 }
 
-runScript(process.argv[2]);
+runScript(program);
