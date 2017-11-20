@@ -1,6 +1,6 @@
 {
   "name": "tycho-scripts",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Node.js scripts for the Tycho.io project.",
   "main": "src/index.js",
   "scripts": {
